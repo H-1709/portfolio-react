@@ -1,0 +1,154 @@
+/* =====================
+   THEME VARIABLES
+===================== */
+
+:root {
+  --bg: rgba(255, 255, 255, 0.7);
+  --text: #1f2937;
+  --border: rgba(0, 0, 0, 0.08);
+  --pink: #f6a6b8;
+  --pink-dark: #ee8fa6;
+}
+
+html[data-theme="dark"] {
+  --bg: #0f0f14;
+  --text: #f9fafb;
+  --muted: #9ca3af;
+
+  --accent: #f0b6c5;
+  --accent-soft: #2a1f24;
+
+  --border: #262626;
+}
+
+
+/* =====================
+   NAVBAR BASE
+===================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.65);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =====================
+   LOGO
+===================== */
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text);
+}
+
+/* =====================
+   NAV LINKS
+===================== */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-links a {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--text);
+  border: 1px solid var(--border);
+  transition: all 0.25s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(246, 166, 184, 0.18);
+  transform: translateY(-1px);
+}
+
+/* Hire Me CTA */
+.hire-btn {
+  background: var(--pink);
+  color: #fff !important;
+  border: none !important;
+}
+
+.hire-btn:hover {
+  background: var(--pink-dark);
+}
+
+/* =====================
+   RIGHT ACTIONS
+===================== */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  padding: 6px 8px;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text);
+}
+
+/* =====================
+   HAMBURGER
+===================== */
+
+.hamburger {
+  display: none;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* =====================
+   MOBILE RESPONSIVE
+===================== */
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: var(--bg);
+    backdrop-filter: blur(14px);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 16px;
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
