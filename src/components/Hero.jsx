@@ -29,7 +29,7 @@ function Hero() {
 
                 <div className="quick-actions">
                     <a className="btn" href="https://github.com/H-1709">GitHub</a>
-                    <a className="btn" href="https://linkedin.com">LinkedIn</a>
+                    <a className="btn" href="https://www.linkedin.com/in/hir-rajyaguru/">LinkedIn</a>
                     <a className="btn" href="/RAJYAGURU_HIR_INTERN.pdf">Resume</a>
                 </div>
             </div>
