@@ -17,15 +17,18 @@ function App() {
   }, []);
 
   return (
+  <>
+    <Header />
+
     <div className="container">
-      <Header />
       <Hero />
       <Skills />
       <Projects />
       <Repos repos={repos} />
       <Footer />
     </div>
-  );
+  </>
+);
 }
 
 export default App;

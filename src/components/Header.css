@@ -3,7 +3,7 @@
 ===================== */
 
 :root {
-  --bg: rgba(255, 255, 255, 0.7);
+  --bg-glass: rgba(255, 255, 255, 0.65);
   --text: #1f2937;
   --border: rgba(0, 0, 0, 0.08);
   --pink: #f6a6b8;
@@ -11,29 +11,24 @@
 }
 
 html[data-theme="dark"] {
-  --bg: #0f0f14;
+  --bg-glass: rgba(15, 15, 20, 0.7);
   --text: #f9fafb;
-  --muted: #9ca3af;
-
-  --accent: #f0b6c5;
-  --accent-soft: #2a1f24;
-
-  --border: #262626;
+  --border: rgba(255, 255, 255, 0.12);
 }
 
-
 /* =====================
-   NAVBAR BASE
+   NAVBAR
 ===================== */
 
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(14px);
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  z-index: 9999;
+
+  background: var(--bg-glass);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+
   border-bottom: 1px solid var(--border);
 }
 
@@ -42,8 +37,8 @@ html[data-theme="dark"] {
   margin: auto;
   padding: 14px 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* =====================
@@ -62,25 +57,22 @@ html[data-theme="dark"] {
 
 .nav-links {
   display: flex;
-  align-items: center;
   gap: 12px;
 }
 
 .nav-links a {
   padding: 8px 16px;
   border-radius: 999px;
-  font-size: 14px;
-  color: var(--text);
   border: 1px solid var(--border);
+  font-size: 14px;
   transition: all 0.25s ease;
 }
 
 .nav-links a:hover {
   background: rgba(246, 166, 184, 0.18);
-  transform: translateY(-1px);
 }
 
-/* Hire Me CTA */
+/* Hire Me */
 .hire-btn {
   background: var(--pink);
   color: #fff !important;
@@ -92,40 +84,30 @@ html[data-theme="dark"] {
 }
 
 /* =====================
-   RIGHT ACTIONS
+   ACTIONS
 ===================== */
 
 .nav-actions {
   display: flex;
-  align-items: center;
   gap: 10px;
 }
 
-.theme-toggle {
+.theme-toggle,
+.hamburger {
   background: none;
   border: 1px solid var(--border);
   border-radius: 50%;
-  padding: 6px 8px;
+  padding: 6px 10px;
   cursor: pointer;
-  font-size: 16px;
   color: var(--text);
 }
-
-/* =====================
-   HAMBURGER
-===================== */
 
 .hamburger {
   display: none;
-  font-size: 22px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--text);
 }
 
 /* =====================
-   MOBILE RESPONSIVE
+   MOBILE
 ===================== */
 
 @media (max-width: 768px) {
@@ -137,13 +119,12 @@ html[data-theme="dark"] {
     position: absolute;
     top: 70px;
     right: 20px;
-    background: var(--bg);
-    backdrop-filter: blur(14px);
+    background: var(--bg-glass);
+    backdrop-filter: blur(18px);
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 16px;
     flex-direction: column;
-    gap: 10px;
     display: none;
   }
 

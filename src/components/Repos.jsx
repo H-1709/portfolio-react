@@ -1,4 +1,10 @@
 function Repos({ repos = [] }) {
+  const recentRepos = [...repos]
+    .sort(
+      (a, b) => new Date(b.updated_at) - new Date(a.updated_at)
+    )
+    .slice(0, 6);
+
   return (
     <section id="repos" className="reveal">
       <div className="section-title">
@@ -7,7 +13,7 @@ function Repos({ repos = [] }) {
       </div>
 
       <div className="repo-grid">
-        {repos.slice(0, 6).map(repo => (
+        {recentRepos.map(repo => (
           <div className="repo-card" key={repo.id}>
             <h4 className="repo-title">{repo.name}</h4>
 
@@ -16,7 +22,7 @@ function Repos({ repos = [] }) {
             </p>
 
             <div className="repo-meta">
-              <span>⭐ {repo.stargazers_count}</span>
+              <span>🕒 Updated recently</span>
               <span>{repo.language || "N/A"}</span>
             </div>
 

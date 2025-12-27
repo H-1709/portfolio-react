@@ -198,11 +198,20 @@ body {
   header {
     flex-direction: column;
     gap: 16px;
+    
   }
 
   .nav {
     justify-content: center;
     gap: 16px;
+    position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
     
   }
 }
@@ -231,9 +240,15 @@ body.dark .repo:hover {
   cursor: pointer;
 }
 html[data-theme="dark"] .navbar {
-  background: rgba(15, 15, 20, 0.7);
-  border-bottom: 1px solid var(--border);
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 15, 20, 0.85),
+    rgba(15, 15, 20, 0.65)
+  );
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
+
 
 
 @media (max-width: 768px) {
@@ -242,6 +257,14 @@ html[data-theme="dark"] .navbar {
   }
 
   .nav {
+    position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
     display: none;
     flex-direction: column;
     gap: 14px;
@@ -250,6 +273,14 @@ html[data-theme="dark"] .navbar {
 
   .nav.open {
     display: flex;
+    position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
   }
 }
 
@@ -612,4 +643,4 @@ body.dark .repo-card {
 }
 html[data-theme="dark"] .btn {
   border-color: rgba(255, 255, 255, 0.18);
-}
+} 
