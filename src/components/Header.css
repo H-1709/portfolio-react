@@ -32,9 +32,8 @@ html[data-theme="dark"] {
   z-index: 1000;
   backdrop-filter: blur(14px);
   background: rgba(255, 255, 255, 0.65);
-backdrop-filter: blur(16px);
--webkit-backdrop-filter: blur(16px);
-
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
 

@@ -1,4 +1,13 @@
 
+html[data-theme="dark"] {
+  --bg: #0f0f14;
+  --text: #f9fafb;
+  --muted: #9ca3af;
+
+  --accent: #f0b6c5;
+  --accent-soft: rgba(240, 182, 197, 0.12);
+  --border: rgba(255, 255, 255, 0.12);
+}
 
 body {
   outline: 5px solid red;
@@ -31,18 +40,8 @@ body {
   --border: #e5e7eb;
 }
 
-/* 🌙 DARK THEME */
-body.dark {
-  --bg: #0f0f14;
-  --text: #f9fafb;
-  --muted: #9ca3af;
 
-  /* darker, muted pinks for contrast */
-  --accent: #f0b6c5;
-  --accent-soft: #2a1f24;
 
-  --border: #262626;
-}
 
 /* Prevent browser default blue links */
 a {
@@ -77,9 +76,15 @@ body {
 }
 
 .kicker {
+  font-size: 1.4rem;
+  font-weight: 600;
   color: var(--accent);
-  font-size: 0.9rem;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
+}
+@media (min-width: 768px) {
+  .kicker {
+    font-size: 1.6rem;
+  }
 }
 
 .hero h2 {
@@ -197,6 +202,8 @@ body {
 
   .nav {
     justify-content: center;
+    gap: 16px;
+    
   }
 }
 .project,
@@ -223,6 +230,11 @@ body.dark .repo:hover {
   border: none;
   cursor: pointer;
 }
+html[data-theme="dark"] .navbar {
+  background: rgba(15, 15, 20, 0.7);
+  border-bottom: 1px solid var(--border);
+}
+
 
 @media (max-width: 768px) {
   .hamburger {
@@ -561,4 +573,43 @@ body.dark .repo-card {
   .repo-card {
     padding: 18px;
   }
+}
+@media (max-width: 768px) {
+  #skills .card {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .skill-group {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .skill-title {
+    min-width: unset;
+    margin-bottom: 10px;
+  }
+
+  .skill-chips {
+    justify-content: center;
+  }
+}
+.btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+  background: transparent;
+  color: var(--text);
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+html[data-theme="dark"] .btn {
+  border-color: rgba(255, 255, 255, 0.18);
 }
