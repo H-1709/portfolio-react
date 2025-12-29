@@ -13,22 +13,32 @@ function App() {
   useEffect(() => {
     fetch("https://api.github.com/users/H-1709/repos")
       .then(res => res.json())
-      .then(data => setRepos(data));
+      .then(data => {
+        const sorted = data
+          .sort(
+            (a, b) =>
+              new Date(b.updated_at) - new Date(a.updated_at)
+          )
+          .slice(0, 6);
+
+        setRepos(sorted);
+      })
+      .catch(err => console.error("Failed to load repos:", err));
   }, []);
 
   return (
-  <>
-    <Header />
+    <>
+      <Header />
 
-    <div className="container">
-      <Hero />
-      <Skills />
-      <Projects />
-      <Repos repos={repos} />
-      <Footer />
-    </div>
-  </>
-);
+      <div className="container">
+        <Hero />
+        <Skills />
+        <Projects />
+        <Repos repos={repos} />
+        <Footer />
+      </div>
+    </>
+  );
 }
 
 export default App;
