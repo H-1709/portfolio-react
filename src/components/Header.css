@@ -16,9 +16,9 @@ html[data-theme="dark"] {
   --border: rgba(255, 255, 255, 0.12);
 }
 
-/* =====================
+/* 
    NAVBAR
-===================== */
+ */
 
 .navbar {
   position: sticky;
