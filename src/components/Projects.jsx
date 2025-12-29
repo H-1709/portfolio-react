@@ -11,10 +11,8 @@ function Projects() {
         <div className="project-card">
           <h4>Intelligent Interview Scheduler & Skill Matcher</h4>
           <p>
-            Designed an intelligent system to match candidates with interviewers
-            using hash-based skill scoring and greedy scheduling algorithms.
-            Automatically resolves availability conflicts while prioritizing
-            skill overlap.
+            Automates interview scheduling by intelligently matching candidates and interviewers, reducing manual coordination.
+            Demonstrates backend logic design, API integration, and clean frontend data visualization.
           </p>
 
           <div className="tech-stack">

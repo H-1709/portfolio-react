@@ -15,7 +15,7 @@ function Hero() {
                     <span className="chip">Node</span>
                     <span className="chip">Express</span>
                     <span className="chip">MongoDB</span>
-                    <span className="chip">OOPs</span>
+                    <span className="chip">Data Structures</span>
                 </div>
             </div>
 

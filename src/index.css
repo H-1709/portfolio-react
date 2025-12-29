@@ -1,4 +1,5 @@
 
+
 html[data-theme="dark"] {
   --bg: #0f0f14;
   --text: #f9fafb;
@@ -41,8 +42,6 @@ body {
 }
 
 
-
-
 /* Prevent browser default blue links */
 a {
   color: inherit;
@@ -71,9 +70,12 @@ body {
 
 /* ========== HERO ========== */
 .hero {
-  padding: 80px 0 60px;
+  
   text-align: center;
+  padding: 80px 0 60px;
 }
+
+
 
 .kicker {
   font-size: 1.4rem;
@@ -201,19 +203,7 @@ body {
     
   }
 
-  .nav {
-    justify-content: center;
-    gap: 16px;
-    position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(14px);
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-    
-  }
+  
 }
 .project,
 .repo,
